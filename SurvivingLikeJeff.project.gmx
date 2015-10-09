@@ -10,6 +10,8 @@
     <sprite>sprites\sprite_zombie</sprite>
     <sprite>sprites\sprite_empty</sprite>
     <sprite>sprites\sprite_femaleZombie</sprite>
+    <sprite>sprites\sprite_swipe</sprite>
+    <sprite>sprites\sprite_playerWSword</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background_tileSet</background>
@@ -20,6 +22,7 @@
     <object>objects\object_player</object>
     <object>objects\object_zombie</object>
     <object>objects\object_wall</object>
+    <object>objects\object_swipe</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room_test</room>
