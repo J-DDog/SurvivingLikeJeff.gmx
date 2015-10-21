@@ -13,6 +13,7 @@
     <sprite>sprites\sprite_swipe</sprite>
     <sprite>sprites\sprite_playerWSword</sprite>
     <sprite>sprites\sprite_heart</sprite>
+    <sprite>sprites\sprite_zombieDead</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background_tileSet</background>
@@ -25,6 +26,7 @@
     <object>objects\object_wall</object>
     <object>objects\object_swipe</object>
     <object>objects\object_health</object>
+    <object>objects\object_zombieDead</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room_test</room>

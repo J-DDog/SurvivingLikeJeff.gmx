@@ -81,14 +81,9 @@ living = true;
           <argument>
             <kind>1</kind>
             <string>///Set Zombie depth
-if (image_index == 4)
-{
-    depth = -y + 15;
-}
-else
-{
-    depth = -y;
-}
+
+depth = -y;
+
 </string>
           </argument>
         </arguments>
@@ -111,13 +106,17 @@ else
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Kill zombie
+            <string>/// Create DeadZombie then Destroy current zombie
 
-if(living)
-{
-    living = false;
-    speed = 0;
-}
+
+/*
+living = false;
+speed = 0;
+solid = !solid;
+*/
+instance_create(x,y,object_zombieDead);
+instance_destroy();
+
 
 </string>
           </argument>
@@ -189,16 +188,19 @@ draw_self();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
+            <string>/// Revive Zombie
+/*
 living = true;
 speed = 1;
+solid = !solid;
+*/
 </string>
           </argument>
         </arguments>
       </action>
     </event>
   </events>
-  <PhysicsObject>0</PhysicsObject>
+  <PhysicsObject>-1</PhysicsObject>
   <PhysicsObjectSensor>0</PhysicsObjectSensor>
   <PhysicsObjectShape>1</PhysicsObjectShape>
   <PhysicsObjectDensity>0.5</PhysicsObjectDensity>
@@ -209,5 +211,10 @@ speed = 1;
   <PhysicsObjectFriction>0.200000002980232</PhysicsObjectFriction>
   <PhysicsObjectAwake>-1</PhysicsObjectAwake>
   <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
-  <PhysicsShapePoints/>
+  <PhysicsShapePoints>
+    <point>8,3</point>
+    <point>23.75,3</point>
+    <point>23.75,32</point>
+    <point>8,32</point>
+  </PhysicsShapePoints>
 </object>

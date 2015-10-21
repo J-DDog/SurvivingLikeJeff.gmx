@@ -194,7 +194,7 @@ depth = -y;
           <argument>
             <kind>1</kind>
             <string>/// Set vulnerable value to true
-if (object_zombie.image_index != 5)
+if (object_zombie.image_index != 4)
 {
     vulnerable = true;
 }
@@ -281,8 +281,8 @@ if(image_index == 3)
   <PhysicsObjectAwake>-1</PhysicsObjectAwake>
   <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
   <PhysicsShapePoints>
-    <point>8,0</point>
-    <point>25,0</point>
+    <point>8,1.125</point>
+    <point>25,1.125</point>
     <point>25,32</point>
     <point>8,32</point>
   </PhysicsShapePoints>
