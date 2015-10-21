@@ -27,6 +27,7 @@
     <object>objects\object_swipe</object>
     <object>objects\object_health</object>
     <object>objects\object_zombieDead</object>
+    <object>objects\object_zombieFemale</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room_test</room>
