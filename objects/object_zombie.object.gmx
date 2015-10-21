@@ -28,7 +28,7 @@
             <string>///set up Variables
 image_speed = 0;
 speed = 1;
-
+object_spawnerZombie.totalZombies += 1;
 
 </string>
           </argument>
@@ -115,6 +115,7 @@ speed = 0;
 solid = !solid;
 */
 //instance_create(x,y,object_zombieDead);
+object_spawnerZombie.totalZombies -= 1;
 instance_destroy();
 
 
