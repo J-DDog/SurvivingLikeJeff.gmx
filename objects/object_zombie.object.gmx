@@ -2,7 +2,7 @@
 <object>
   <spriteName>sprite_zombie</spriteName>
   <solid>0</solid>
-  <visible>-1</visible>
+  <visible>0</visible>
   <depth>0</depth>
   <persistent>-1</persistent>
   <parentName>&lt;undefined&gt;</parentName>
@@ -28,7 +28,7 @@
             <string>///set up Variables
 image_speed = 0;
 speed = 1;
-living = true;
+
 
 </string>
           </argument>
@@ -114,7 +114,7 @@ living = false;
 speed = 0;
 solid = !solid;
 */
-instance_create(x,y,object_zombieDead);
+//instance_create(x,y,object_zombieDead);
 instance_destroy();
 
 
@@ -160,10 +160,6 @@ if(direction &gt; 135 and direction &lt;= 225)
 if(direction &gt; 45 and direction &lt;= 135)
 {
     image_index = 3;
-}
-if(!living)
-{
-    image_index = 4;
 }
 draw_self();
 </string>
