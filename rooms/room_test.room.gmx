@@ -57,6 +57,7 @@
     <instance objName="object_wall" x="0" y="256" name="inst_9A22555E" locked="0" code="" scaleX="10" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="object_wall" x="288" y="256" name="inst_2AB45668" locked="0" code="" scaleX="1" scaleY="-7" colour="4294967295" rotation="0"/>
     <instance objName="object_wall" x="0" y="32" name="inst_AF00C558" locked="0" code="" scaleX="1" scaleY="7" colour="4294967295" rotation="0"/>
+    <instance objName="object_health" x="96" y="0" name="inst_52D38206" locked="0" code="" scaleX="1.33333337306976" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="background_tileSet" x="0" y="0" w="32" h="32" xo="0" yo="0" id="10000001" name="inst_4F492839" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

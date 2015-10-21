@@ -29,6 +29,8 @@
 mySpeed = 5;
 myDistance = 12;
 image_speed = 0;
+swiping = false;
+health = 3;
 </string>
           </argument>
         </arguments>
@@ -54,30 +56,45 @@ image_speed = 0;
             <string>/// Move the Player in the step event  
 // Move down
 if (keyboard_check(vk_down)or(keyboard_check(ord("s"))))
-{
-    y += mySpeed;
-    image_index = 0;
+{  
+    if(keyboard_check(swiping == false))
+    {
+        y += mySpeed;
+        image_index = 0;
+    }
 }
 
 // Move right
 if (keyboard_check(vk_right)or(keyboard_check(ord("d"))))
-{
-    x += mySpeed;
-    image_index = 1;
+{   
+    if(keyboard_check(swiping == false))
+    {
+        x += mySpeed;
+        image_index = 1;
+    }
+
 }
 
 // Move left
 if (keyboard_check(vk_left)or(keyboard_check(ord("a"))))
 {
-    x -= mySpeed;
-    image_index = 2;
+    if(keyboard_check(swiping == false))
+    {
+        x -= mySpeed;
+        image_index = 2;
+    }
+    
 }
 
 // Move up
 if (keyboard_check(vk_up)or(keyboard_check(ord("w"))))
 {
-    y -= mySpeed;
-    image_index = 3;
+    if(keyboard_check(swiping == false))
+    {
+        y -= mySpeed;
+        image_index = 3;
+    }
+    
 }
 </string>
           </argument>
@@ -124,6 +141,34 @@ depth = -y;
           <argument>
             <kind>1</kind>
             <string></string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="object_zombie">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// remove health from player
+if (object_zombie.image_index != 5)
+{
+    health -= 1;
+}
+
+</string>
           </argument>
         </arguments>
       </action>

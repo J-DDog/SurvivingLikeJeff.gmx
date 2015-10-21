@@ -80,7 +80,15 @@ living = true;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>depth = -y;
+            <string>///Set Zombie depth
+if (image_index == 4)
+{
+    depth = -y + 15;
+}
+else
+{
+    depth = -y;
+}
 </string>
           </argument>
         </arguments>
