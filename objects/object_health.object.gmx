@@ -47,7 +47,7 @@ image_speed = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>// set alarm
+            <string>/// set alarm to 30
 alarm[0] = 30;
 </string>
           </argument>

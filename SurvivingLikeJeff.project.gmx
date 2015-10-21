@@ -8,13 +8,13 @@
   <sprites name="sprites">
     <sprite>sprites\sprite_player</sprite>
     <sprite>sprites\sprite_zombie</sprite>
-    <sprite>sprites\sprite_empty</sprite>
     <sprite>sprites\sprite_femaleZombie</sprite>
     <sprite>sprites\sprite_swipe</sprite>
     <sprite>sprites\sprite_playerWSword</sprite>
     <sprite>sprites\sprite_heart</sprite>
     <sprite>sprites\sprite_zombieMaleDead</sprite>
     <sprite>sprites\sprite_zombieFemaleDead</sprite>
+    <sprite>sprites\sprite_empty</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background_tileSet</background>

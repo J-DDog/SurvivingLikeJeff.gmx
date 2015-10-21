@@ -85,47 +85,50 @@ alarm[0] = 30;
           <argument>
             <kind>1</kind>
             <string>/// Move the Player in the step event  
-// Move down
-if (keyboard_check(vk_down)or(keyboard_check(ord("s"))))
-{  
-    if(keyboard_check(swiping == false))
-    {
-        y += mySpeed;
-        image_index = 0;
-    }
-}
-
-// Move right
-if (keyboard_check(vk_right)or(keyboard_check(ord("d"))))
-{   
-    if(keyboard_check(swiping == false))
-    {
-        x += mySpeed;
-        image_index = 1;
-    }
-
-}
-
-// Move left
-if (keyboard_check(vk_left)or(keyboard_check(ord("a"))))
+if (image_index != 4)
 {
-    if(keyboard_check(swiping == false))
-    {
-        x -= mySpeed;
-        image_index = 2;
+    // Move down
+    if (keyboard_check(vk_down)or(keyboard_check(ord('S'))))
+    {  
+        if(keyboard_check(swiping == false))
+        {
+            y += mySpeed;
+            image_index = 0;
+        }
     }
     
-}
-
-// Move up
-if (keyboard_check(vk_up)or(keyboard_check(ord("w"))))
-{
-    if(keyboard_check(swiping == false))
-    {
-        y -= mySpeed;
-        image_index = 3;
+    // Move right
+    if (keyboard_check(vk_right)or(keyboard_check(ord('D'))))
+    {   
+        if(keyboard_check(swiping == false))
+        {
+            x += mySpeed;
+            image_index = 1;
+        }
+    
     }
     
+    // Move left
+    if (keyboard_check(vk_left)or(keyboard_check(ord('A'))))
+    {
+        if(keyboard_check(swiping == false))
+        {
+            x -= mySpeed;
+            image_index = 2;
+        }
+        
+    }
+    
+    // Move up
+    if (keyboard_check(vk_up)or(keyboard_check(ord('W'))))
+    {
+        if(keyboard_check(swiping == false))
+        {
+            y -= mySpeed;
+            image_index = 3;
+        }
+        
+    }
 }
 </string>
           </argument>
@@ -147,7 +150,7 @@ if (keyboard_check(vk_up)or(keyboard_check(ord("w"))))
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
+            <string>/// Set Player Depth
 depth = -y;
 </string>
           </argument>
@@ -171,7 +174,8 @@ depth = -y;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string></string>
+            <string>/// DO NOTHING
+</string>
           </argument>
         </arguments>
       </action>
@@ -194,11 +198,35 @@ depth = -y;
           <argument>
             <kind>1</kind>
             <string>/// Set vulnerable value to true
-if (object_zombie.image_index != 4)
-{
-    vulnerable = true;
-}
 
+vulnerable = true;
+
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Kill Player
+if (health == 0)
+{
+    image_index = 4;
+}
 </string>
           </argument>
         </arguments>
@@ -222,6 +250,7 @@ if (object_zombie.image_index != 4)
           <argument>
             <kind>1</kind>
             <string>/// Fully Heal Player
+image_index = 0;
 health = 3;
 </string>
           </argument>
@@ -245,24 +274,27 @@ health = 3;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(image_index == 0)
-{
-    instance_create(x, y + myDistance, object_swipe);
-    
+            <string>/// Creates Swipe Instance
+if (image_index != 4)
+{    
+    if(image_index == 0)
+    {
+        instance_create(x, y + myDistance, object_swipe);
+        
+    }
+    if(image_index == 1)
+    {
+        instance_create(x + myDistance, y, object_swipe);
+    }
+    if(image_index == 2)
+    {
+        instance_create(x - myDistance, y, object_swipe);
+    }
+    if(image_index == 3)
+    {
+        instance_create(x, y - myDistance, object_swipe);
+    }
 }
-if(image_index == 1)
-{
-    instance_create(x + myDistance, y, object_swipe);
-}
-if(image_index == 2)
-{
-    instance_create(x - myDistance, y, object_swipe);
-}
-if(image_index == 3)
-{
-    instance_create(x, y - myDistance, object_swipe);
-}
-
 </string>
           </argument>
         </arguments>
