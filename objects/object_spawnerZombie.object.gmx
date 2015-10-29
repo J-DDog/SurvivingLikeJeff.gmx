@@ -2,7 +2,7 @@
 <object>
   <spriteName>sprite_empty</spriteName>
   <solid>0</solid>
-  <visible>0</visible>
+  <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
@@ -31,6 +31,7 @@ currentSpeed = 60;
 drawWin = false;
 drawLose = false;
 totalZombies = 0;
+depth = -3000;
 </string>
           </argument>
         </arguments>
@@ -106,6 +107,7 @@ if (total &gt; 0)
 {
     total -= 1;
 }
+
 </string>
           </argument>
         </arguments>
@@ -131,12 +133,14 @@ if (total &gt; 0)
             <string>/// Draw Win or loose
 if (drawWin == true)
 {
-    draw_text(x,y,"You WIN!!!");
+    draw_sprite(sprite_endWin,0,x,y);
 }
 if (drawLose == true)
 {
     draw_text(x,y,"You DIED!!!");
 }
+draw_text(15,15,"TEST");
+draw_text(40,40,totalZombies);
 </string>
           </argument>
         </arguments>

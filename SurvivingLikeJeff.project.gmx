@@ -15,6 +15,8 @@
     <sprite>sprites\sprite_zombieMaleDead</sprite>
     <sprite>sprites\sprite_zombieFemaleDead</sprite>
     <sprite>sprites\sprite_empty</sprite>
+    <sprite>sprites\sprite_endWin</sprite>
+    <sprite>sprites\sprite_endLose</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background_tileSet</background>
