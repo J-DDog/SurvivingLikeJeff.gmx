@@ -196,10 +196,11 @@ depth = -y;
 if(vulnerable = true and health &gt; 0)
 {
     health -= 1;
+    vulnerable = false;
+    alarm[0] = 30;
 }
 
-vulnerable = false;
-alarm[0] = 30;
+
 
 </string>
           </argument>
@@ -250,9 +251,10 @@ if (health == 0)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Fully Heal Player
-image_index = 0;
+            <string>/// Reset Values
+mySpeed = 5;
 health = 3;
+vulnerable = true;
 image_alpha = 1;
 </string>
           </argument>
