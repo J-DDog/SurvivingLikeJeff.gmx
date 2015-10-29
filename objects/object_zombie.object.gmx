@@ -106,7 +106,7 @@ depth = -y;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Create DeadZombie then Destroy current zombie
+            <string> /// Create DeadZombie then Destroy current zombie
 
 
 /*
@@ -115,7 +115,7 @@ speed = 0;
 solid = !solid;
 */
 //instance_create(x,y,object_zombieDead);
-object_spawnerZombie.totalZombies -= 1;
+//object_spawnerZombie.totalZombies -= 1;
 instance_destroy();
 
 
@@ -185,12 +185,8 @@ draw_self();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Revive Zombie
-/*
-living = true;
-speed = 1;
-solid = !solid;
-*/
+            <string>/// Delete Zombies
+instance_destroy();
 </string>
           </argument>
         </arguments>

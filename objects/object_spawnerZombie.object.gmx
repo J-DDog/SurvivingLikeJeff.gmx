@@ -32,27 +32,6 @@ drawWin = false;
 drawLose = false;
 totalZombies = 0;
 depth = -3000;
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/// Create Zombie total spawns
 total = 30;
 
 </string>
@@ -141,6 +120,36 @@ if (drawLose == true)
 }
 draw_text(15,15,"TEST");
 draw_text(40,40,totalZombies);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="46">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Reset variables
+alarm[0] = 20;
+currentSpeed = 60;
+drawWin = false;
+drawLose = false;
+totalZombies = 0;
+total = 30;
+
 </string>
           </argument>
         </arguments>
